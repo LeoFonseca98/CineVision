@@ -11,7 +11,7 @@ Aplicação web desenvolvida em React que permite pesquisar filmes, visualizar d
 - **Busca de Filmes:** Pesquise filmes pelo nome com resultados em tempo real.
 -  **Listagem de Filmes:** Veja os filmes mais populares ou os resultados da sua busca.
 -  **Gerenciamento de Favoritos:** Adicione ou remova filmes da sua lista de favoritos, com armazenamento local no navegador (**localStorage**).
--  **Detalhes do Filme:** Acesse informações completas como sinopse, avaliação, data de lançamento, imagem do cartaz e muito mais.
+-  **Detalhes do Filme:** Acesse informações como sinopse, avaliação e imagem do cartaz.
 -  **Interface Moderna e Responsiva:** Desenvolvida com **React**, **Bootstrap** e **Styled-Components** para oferecer uma ótima experiência em qualquer dispositivo.
 -  **Roteamento:** Navegação fluida entre as páginas utilizando **React Router**.
 

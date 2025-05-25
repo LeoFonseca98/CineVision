@@ -40,22 +40,22 @@ Aplicação web desenvolvida em React que permite pesquisar filmes, visualizar d
 
 ---
 
-## ⚙ Configuração do Projeto
+## Configuração do Projeto
 
-### 1️⃣ Clone o Repositório
+### 1️ Clone o Repositório
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
 
-### 2️⃣ Instale as Dependências
+### 2️ Instale as Dependências
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Crie o Arquivo `.env`
+### 3️ Crie o Arquivo `.env`
 
 Na raiz do projeto, crie um arquivo chamado `.env` e adicione suas chaves:
 
@@ -64,7 +64,7 @@ REACT_APP_API_KEY=SUA_API_KEY
 REACT_APP_IMG=https://image.tmdb.org/t/p/w500
 ```
 
-### 4️⃣ Inicie o Projeto
+### 4️ Inicie o Projeto
 
 ```bash
 npm start
@@ -75,29 +75,6 @@ O projeto estará rodando em:
 ```
 http://localhost:3000
 ```
-
----
-
-## 🏗️ Estrutura de Pastas
-
-```
-📂 src
- ┣ 📂 components
- ┃ ┣ 📜 MovieCard.jsx      → Card de filme com favoritos
- ┃ ┣ 📜 Navbar.jsx         → Barra de navegação
- ┃ ┗ 📜 SearchBar.jsx      → Barra de pesquisa
- ┣ 📂 pages
- ┃ ┣ 📜 Home.jsx           → Página inicial com filmes populares
- ┃ ┣ 📜 Movie.jsx          → Página de detalhes do filme
- ┃ ┗ 📜 Favorites.jsx      → Página de filmes favoritos
- ┣ 📂 services
- ┃ ┗ 📜 api.js             → Configuração do Axios e da API
- ┣ 📜 App.js               → Arquivo principal de rotas
- ┣ 📜 index.js             → Entrada da aplicação React
- ┣ 📜 App.css              → Estilo global
- ┗ 📜 .env                 → Variáveis de ambiente (não vai pro Git)
-```
-
 ---
 
 ## 📦 Scripts Disponíveis
@@ -108,16 +85,13 @@ http://localhost:3000
 
 ---
 
-## 💡 Observações Importantes
+## Observações Importantes
 
 - As informações sobre os filmes são obtidas diretamente da API do **TMDb**.
 - A lista de filmes favoritos é salva no navegador do usuário usando **localStorage**, portanto, não é compartilhada entre dispositivos ou navegadores.
 - Nunca exponha sua API Key publicamente em repositórios públicos. Adicione o arquivo `.env` no seu `.gitignore`.
 
----
-
-## 📧 Contato
+## Contato
 
 Desenvolvido por **Leonardo**.  
-📧 Email: seu-email@email.com  
-🔗 LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/seu-perfil)
+Email: fonsecaleonardo86@email.com

@@ -77,11 +77,9 @@ http://localhost:3000
 ```
 ---
 
-## 📦 Scripts Disponíveis
+## Scripts Disponíveis
 
 - `npm start` – Roda o app em modo desenvolvimento.
-- `npm run build` – Gera uma versão de produção do app.
-- `npm test` – Executa os testes (caso implementados).
 
 ---
 

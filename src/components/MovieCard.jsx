@@ -1,11 +1,16 @@
-import { FaStar } from "react-icons/fa";
+import styled from "styled-components";
+import { FaStar, FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import '../pages/FavGrid.css';
-import './Navbar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const imageUrl = process.env.REACT_APP_IMG
+const imageUrl = process.env.REACT_APP_IMG;
+
+const MovieCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+`;
 
 const MovieCard = ({ movie, showLink = true }) => {
   const [isFavorito, setIsFavorito] = useState(false);
@@ -16,7 +21,7 @@ const MovieCard = ({ movie, showLink = true }) => {
     setIsFavorito(favoritoExiste);
   }, [movie.id]);
 
-  const toggleFavorito = () => {
+  const atualizarFavorito = () => {
     const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
     if (isFavorito) {
@@ -31,24 +36,39 @@ const MovieCard = ({ movie, showLink = true }) => {
   };
 
   return (
-    <div className="movie-card">
-      <img src={imageUrl + movie.poster_path} alt={movie.title} />
-      <h2>{movie.title}</h2>
-      <p>
-        <FaStar /> {movie.vote_average}
-      </p>
-
-      <div className="buttons">
-        {showLink && (<button><Link to={`/movie/${movie.id}`}>Detalhes</Link></button>)}
-        {showLink && (<button onClick={toggleFavorito} className="fav-buttons">
-          {isFavorito ? <FaHeart color="red" /> : <FaRegHeart />}{" "}
-          {isFavorito ? "Remover" : "Favoritar"}
-        </button>
-      )}
+    <MovieCardContainer>
+      <div className="card text-center shadow-sm p-2" style={{ width: '20rem', margin: '15px' }}>
+        <img
+          src={imageUrl + movie.poster_path}
+          className="card-img-top"
+          alt={movie.title}
+          style={{ height: '450px', objectFit: 'cover' }}
+        />
+        <div className="card-body">
+          <h5 className="card-title">{movie.title}</h5>
+          <p className="card-text">
+            <FaStar className="text-warning" /> {movie.vote_average}
+          </p>
+          <div className="d-flex justify-content-around">
+            {showLink && (
+              <Link to={`/movie/${movie.id}`} className="btn btn-primary">
+                Detalhes
+              </Link>
+            )}
+            {showLink && (
+              <button
+                onClick={atualizarFavorito}
+                className={`btn ${isFavorito ? 'btn-danger' : 'btn-outline-danger'}`}
+              >
+                {isFavorito ? <FaHeart /> : <FaRegHeart />}
+                {isFavorito ? ' Remover' : ' Favoritar'}
+              </button>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
+    </MovieCardContainer>
   );
 };
 
 export default MovieCard;
-  

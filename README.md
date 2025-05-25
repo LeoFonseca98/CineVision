@@ -62,6 +62,8 @@ Na raiz do projeto, crie um arquivo chamado `.env` e adicione suas chaves:
 ```env
 REACT_APP_API_KEY=SUA_API_KEY
 REACT_APP_IMG=https://image.tmdb.org/t/p/w500
+REACT_APP_API=https://api.themoviedb.org/3/movie/
+REACT_APP_SEARCH=https://api.themoviedb.org/3/search/movie
 ```
 
 ### 4️ Inicie o Projeto
